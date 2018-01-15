@@ -1,16 +1,19 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
+    <p>{{wordShow}}</p>
     <div class="button" @click="showScan()">click me</div>
   </div>
 </template>
 
 <script>
+import {getDataAPI} from '@/netAPI/api'
 export default {
   name: "HelloWorld",
   data() {
     return {
-      msg: "Welcome to Your Vue.js App"
+      msg: "Welcome to Your Vue.js App",
+      wordShow: ''
     };
   },
   methods: {
@@ -29,6 +32,10 @@ export default {
         }
       );
     }
+  },
+  mounted(){
+      this.$store.commit('addCount',5) 
+      this.wordShow = this.$store.state.count
   }
 };
 </script>
