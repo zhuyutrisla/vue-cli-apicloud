@@ -19,11 +19,11 @@
  * 
  * 组件中
  *  get /post 方法使用一致
- *  var parmas = {
+ *  var params  = {
  *    'a' :1,
  *    'b': 2 
  *  }
- *  getNoDataAPI(parmas).then( res => { console.log(res)}).catch( err => { console.log(err})
+ *  getNoDataAPI(params ).then( res => { console.log(res)}).catch( err => { console.log(err})
  *
  */
 
